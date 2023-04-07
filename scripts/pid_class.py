@@ -65,20 +65,20 @@ class PID:
 
     def __init__(self,
 
-                 roll=PIDaxis(2.0, 1.0, 0.0, control_range=(1400, 1600), midpoint=1500, i_range=(-100, 100)),
+                 roll=PIDaxis(0.5, 0.5, 0.0, control_range=(1400, 1600), midpoint=1500, i_range=(-100, 100)),
                  roll_low=PIDaxis(0.0, 0.5, 0.0, control_range=(1400, 1600), midpoint=1500, i_range=(-150, 150)),
 
-                 pitch=PIDaxis(2.0, 1.0, 0.0, control_range=(1400, 1600), midpoint=1500, i_range=(-100, 100)),
+                 pitch=PIDaxis(0.5, 0.5, 0.0, control_range=(1400, 1600), midpoint=1500, i_range=(-100, 100)),
                  pitch_low=PIDaxis(0.0, 0.5, 0.0, control_range=(1400, 1600), midpoint=1500, i_range=(-150, 150)),
 
                  yaw=PIDaxis(0.0, 0.0, 0.0),
 
                  # Kv 2300 motors have midpoint 1300, Kv 2550 motors have midpoint 1250
-                 throttle=PIDaxis(1,
-                                  0, #0.5/height_factor * battery_factor,
+                 throttle=PIDaxis(0.8,
+                                  0.35, #0.5/height_factor * battery_factor,
                                   1,
-                                  i_range=(-400, 400), control_range=(1200, 1600),
-                                  d_range=(-40, 40), midpoint=1450)
+                                  i_range=(-400, 400), control_range=(1200, 1500),
+                                  d_range=(-40, 40), midpoint=1400)
                  ):
 
         self.trim_controller_cap_plane = 0.05
