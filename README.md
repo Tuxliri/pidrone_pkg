@@ -1,3 +1,4 @@
+# NOTE: these instructions have been deprecated, USE THE ONES [HERE](https://docs.duckietown.com/daffy/opmanual-duckiedrone/intro.html)
 # PiDrone Pkg
 
 For Stefanie Tellex's class
